@@ -1,0 +1,47 @@
+:root{--bg:#F4F7F9;--ink:#14263A;--mut:#485A6B;--acc:#1D6DB5;--hi:#E39A0B;--line:#C9D5DE;--card:#FFF}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0F1B27;--ink:#E7EEF4;--mut:#A3B3C2;--acc:#6DB2EE;--hi:#F2B441;--line:#2B3D4E;--card:#162636}}
+:root[data-theme=dark]{--bg:#0F1B27;--ink:#E7EEF4;--mut:#A3B3C2;--acc:#6DB2EE;--hi:#F2B441;--line:#2B3D4E;--card:#162636}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 Arial,Helvetica,sans-serif}
+a{color:var(--acc)}a:focus-visible,button:focus-visible{outline:3px solid var(--hi);outline-offset:3px}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+header .wrap{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-items:center;justify-content:space-between;padding-top:1.1rem;padding-bottom:1.1rem}
+.brand{font:700 1.15rem "Merriweather",serif;color:var(--ink);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.4rem;align-items:center}
+nav a{color:var(--ink);text-decoration:none;padding:.2rem 0;border-bottom:3px solid transparent}
+nav a:hover,nav a[aria-current]{border-color:var(--hi)}
+button.theme{font:inherit;font-size:.9rem;background:none;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:.2rem .7rem;cursor:pointer}
+.hero{background:repeating-radial-gradient(ellipse at 88% 15%,transparent 0 26px,var(--line) 26px 27px);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:5rem;padding-bottom:5rem}
+h1{font:700 clamp(2.6rem,8vw,5rem)/1.05 "Merriweather",serif;margin:0 0 .6rem;letter-spacing:-.02em}
+.hero p.sub{font-size:1.3rem;color:var(--mut);margin:0;border-left:5px solid var(--hi);padding-left:1rem}
+h2{font:700 1.9rem/1.2 "Merriweather",serif;margin:0 0 .6rem}
+h3{font:700 1.15rem/1.3 "Merriweather",serif;margin:0}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:2.5rem;align-items:center;padding:3.5rem 0;border-bottom:1px solid var(--line)}
+figure{margin:0;min-width:0}
+.ph{aspect-ratio:4/3;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;color:var(--mut);font-size:.9rem;background:repeating-radial-gradient(circle at 30% 70%,var(--card) 0 14px,var(--line) 14px 15px)}
+.ph span{background:var(--bg);padding:.15rem .6rem;border-radius:4px}
+.prose{max-width:40rem}.prose p{margin:0 0 1.1rem}
+main.page{padding-top:3.5rem;padding-bottom:3.5rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin:2.5rem 0}
+.job{padding:1.1rem 0 1.1rem 1.4rem;border-left:3px solid var(--line);position:relative}
+.job:before{content:"";position:absolute;left:-8px;top:1.55rem;width:13px;height:13px;border-radius:50%;background:var(--acc)}
+.job small{color:var(--mut);display:block}.job p{margin:.4rem 0 0;max-width:40rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:.15rem .8rem;font-size:.95rem}
+footer{border-top:1px solid var(--line);margin-top:2rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;padding-top:1.5rem;padding-bottom:2rem;color:var(--mut);font-size:.95rem}
+footer a{margin-right:1rem}
+blockquote{border-left:4px solid var(--acc);margin:1.4rem 0;padding:.1rem 0 .1rem 1.3rem;max-width:40rem}
+blockquote p{margin:0 0 .5rem;font-style:italic}
+blockquote footer{font-size:.92rem;color:var(--mut);margin:0}
+@media(max-width:44rem){.row{grid-template-columns:minmax(0,1fr);gap:1.2rem}}
+.crop{width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:50% 10%;border-radius:4px;border:1px solid var(--line);display:block}
+.story-hero{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block;margin:0 0 2.2rem}
+.intro{max-width:48rem;margin:0 auto}
+.intro h1{text-align:center;margin-bottom:1.6rem}
+.intro .prose{max-width:none}
+
+.hero-img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%;border-radius:4px;display:block}
+.split{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:2rem;align-items:start;margin-top:1rem}
+@media(max-width:44rem){.split{grid-template-columns:1fr;gap:1.5rem}.hero-img{max-width:15rem}}
