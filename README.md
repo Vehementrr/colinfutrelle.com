@@ -1,7 +1,8 @@
 # colinfutrelle.com
 
 Personal site for Colin Futrelle — a product/engineering leadership profile with
-four sections: Professional, Backcountry Skier, Rock Climber, and Mountaineer.
+two sections: Professional and Outdoor Athlete (rock climbing, mountaineering,
+and backcountry skiing).
 
 Plain HTML/CSS, no build step, no framework. Hosted free on Cloudflare Pages,
 auto-deployed from this repo's main branch.
@@ -9,26 +10,24 @@ auto-deployed from this repo's main branch.
 ## File structure
 
 ```
-index.html                     Homepage — four clickable tiles, one per section
+index.html                     Homepage — one row per section (Professional, Outdoor Athlete)
 professional.html              Professional story, work history, testimonials
-backcountry-skier.html         Backcountry Skier section page
-rock-climber.html              Rock Climber section page
-mountaineer.html               Mountaineer section page
+outdoor-athlete.html           Rock Climber, Mountaineer, and Backcountry Skier sections
 style.css                      All site styling (single shared stylesheet)
 site.js                        Light/dark/auto theme toggle logic
 README.md                      This file
 
 professional-headshot.jpg      Homepage photo, Professional row
 product-management-diagram.jpg Hero image on professional.html
-climbing.jpg                   Rock Climber photo (homepage + section page)
-ski-team.jpg                   Backcountry Skier photo (homepage + section page)
-glacier-team.jpg               Mountaineer photo (homepage + section page)
+climbing.jpg                   Rock Climber photo (homepage Outdoor Athlete row + outdoor-athlete.html)
+glacier-team.jpg               Mountaineer photo (outdoor-athlete.html)
+ski-team.jpg                   Backcountry Skier photo (outdoor-athlete.html)
 ```
 
 Every page links to the same `style.css` and `site.js`, so a styling change in
 one place applies everywhere. There's no templating, so shared markup (the
 header nav, the footer) is duplicated at the top/bottom of each HTML file —
-if you change the nav or footer, update it in all five `.html` files.
+if you change the nav or footer, update it in all three `.html` files.
 
 ## Making changes
 
@@ -54,8 +53,8 @@ earlier in this site's history.
 When adding a new photo:
 - Keep file sizes reasonable (compress/resize before committing — most
   photos in this repo are under 200KB).
-- Match the existing pattern: homepage tiles use `<img class="crop">`,
-  section-page hero images use `<img class="story-hero">`.
+- Match the existing pattern: homepage rows use `<img class="crop">`,
+  images on the section pages use `<img class="story-hero">`.
 
 ## Hosting
 
